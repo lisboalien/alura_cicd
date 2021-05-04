@@ -1,6 +1,12 @@
 image: docker:stable
 
+services:
+  - docker:dind
+
+bofore_script:
+  - docker info
+
 build-docker:
   stage: build
   script:
-  - docker build -t minha-imagem .
+    - docker build -t minha-imagem .
