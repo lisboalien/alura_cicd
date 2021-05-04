@@ -4,7 +4,8 @@ services:
   - docker:dind
 
 bofore_script:
-  - docker info
+  script:
+    - docker info
 
 build-docker:
   stage: build
