@@ -5,7 +5,7 @@ services:
 
 before_script:
   - docker info
-  - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" -password-stdin
+  - echo "$CI_REGISTRY_PASSWORD" | docker login --username "$CI_REGISTRY_USER" --password-stdin
 
 build-docker:
   stage: build
